@@ -1,0 +1,54 @@
+calculating 99999999
+
+ got value for i:2 p:9999
+ got value for i:3 p:464
+ got value for i:4 p:99
+ got value for i:5 p:39
+ got value for i:6 p:21
+ got value for i:7 p:13
+ got value for i:8 p:9
+ got value for i:9 p:7
+ got value for i:10 p:6
+ got value for i:11 p:5
+ got value for i:12 p:4
+ got value for i:13 p:4
+ got value for i:14 p:3
+ got value for i:15 p:3
+ got value for i:16 p:3
+ got value for i:17 p:2
+ got value for i:18 p:2
+ got value for i:19 p:2
+ got value for i:20 p:2
+ got value for i:21 p:2
+ got value for i:22 p:2
+ got value for i:23 p:2
+ got value for i:24 p:2
+ got value for i:25 p:2
+ got value for i:26 p:2
+ got value for i:27 p:1
+
+ final value for k:2 = 9855
+ final value for k:3 = 429
+ final value for k:4 = 83
+ final value for k:5 = 29
+ final value for k:6 = 15
+ final value for k:7 = 9
+ final value for k:8 = 5
+ final value for k:9 = 5
+ final value for k:10 = 4
+ final value for k:11 = 3
+ final value for k:12 = 2
+ final value for k:13 = 2
+ final value for k:14 = 2
+ final value for k:15 = 2
+ final value for k:16 = 2
+ final value for k:17 = 1
+ final value for k:18 = 1
+ final value for k:19 = 1
+ final value for k:20 = 1
+ final value for k:21 = 1
+ final value for k:22 = 1
+ final value for k:23 = 1
+ final value for k:24 = 1
+ final value for k:25 = 1
+ final value for k:26 = 17

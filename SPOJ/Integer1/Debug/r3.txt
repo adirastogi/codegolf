@@ -1,0 +1,108 @@
+calculating 10000000000000000
+
+ got value for i:2 p:100000000
+ got value for i:3 p:215443
+ got value for i:4 p:10000
+ got value for i:5 p:1584
+ got value for i:6 p:464
+ got value for i:7 p:193
+ got value for i:8 p:100
+ got value for i:9 p:59
+ got value for i:10 p:39
+ got value for i:11 p:28
+ got value for i:12 p:21
+ got value for i:13 p:17
+ got value for i:14 p:13
+ got value for i:15 p:11
+ got value for i:16 p:10
+ got value for i:17 p:8
+ got value for i:18 p:7
+ got value for i:19 p:6
+ got value for i:20 p:6
+ got value for i:21 p:5
+ got value for i:22 p:5
+ got value for i:23 p:4
+ got value for i:24 p:4
+ got value for i:25 p:4
+ got value for i:26 p:4
+ got value for i:27 p:3
+ got value for i:28 p:3
+ got value for i:29 p:3
+ got value for i:30 p:3
+ got value for i:31 p:3
+ got value for i:32 p:3
+ got value for i:33 p:3
+ got value for i:34 p:2
+ got value for i:35 p:2
+ got value for i:36 p:2
+ got value for i:37 p:2
+ got value for i:38 p:2
+ got value for i:39 p:2
+ got value for i:40 p:2
+ got value for i:41 p:2
+ got value for i:42 p:2
+ got value for i:43 p:2
+ got value for i:44 p:2
+ got value for i:45 p:2
+ got value for i:46 p:2
+ got value for i:47 p:2
+ got value for i:48 p:2
+ got value for i:49 p:2
+ got value for i:50 p:2
+ got value for i:51 p:2
+ got value for i:52 p:2
+ got value for i:53 p:2
+ got value for i:54 p:1
+
+ final value for k:2 = 99989322
+ final value for k:3 = 214866
+ final value for k:4 = 9854
+ final value for k:5 = 1521
+ final value for k:6 = 429
+ final value for k:7 = 171
+ final value for k:8 = 83
+ final value for k:9 = 48
+ final value for k:10 = 29
+ final value for k:11 = 20
+ final value for k:12 = 15
+ final value for k:13 = 11
+ final value for k:14 = 9
+ final value for k:15 = 7
+ final value for k:16 = 6
+ final value for k:17 = 5
+ final value for k:18 = 5
+ final value for k:19 = 4
+ final value for k:20 = 4
+ final value for k:21 = 3
+ final value for k:22 = 3
+ final value for k:23 = 2
+ final value for k:24 = 2
+ final value for k:25 = 2
+ final value for k:26 = 2
+ final value for k:27 = 2
+ final value for k:28 = 2
+ final value for k:29 = 2
+ final value for k:30 = 2
+ final value for k:31 = 2
+ final value for k:32 = 2
+ final value for k:33 = 2
+ final value for k:34 = 1
+ final value for k:35 = 1
+ final value for k:36 = 1
+ final value for k:37 = 1
+ final value for k:38 = 1
+ final value for k:39 = 1
+ final value for k:40 = 1
+ final value for k:41 = 1
+ final value for k:42 = 1
+ final value for k:43 = 1
+ final value for k:44 = 1
+ final value for k:45 = 1
+ final value for k:46 = 1
+ final value for k:47 = 1
+ final value for k:48 = 1
+ final value for k:49 = 1
+ final value for k:50 = 1
+ final value for k:51 = 1
+ final value for k:52 = 1
+ final value for k:53 = 1

@@ -1,0 +1,125 @@
+//============================================================================
+// Name        : Backpack.cpp
+// Author      : Aditya
+// Version     :
+// Copyright   : SPOJ problem BACKPACK: http://www.spoj.com/problems/BACKPACK/
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+#define SWAP(items,i,j)   {item t = items[i]; items[i] = items[j]; items[j] = t; items[j].attachment_of = i;}
+#define CHECK(cond,tr,fl) ((cond)) ? (tr) : (fl)
+#define VALUE(items,i) (((items)[i].cost) * ((items)[i].volume))
+using namespace std;
+struct item{
+	int 	cost;
+	int 	volume;
+	int 	attachment_of;
+	bool 	included;
+};
+
+long calculateCost(item items[], int N, int vmax){
+
+	//the DP matrix for calculating the benefit
+	int b[61][3200];
+	int inc[61][3200];
+	memset(inc,0,61*3200*sizeof(int));
+
+	for(int i=1;i<=N;i++)
+		b[i][0] = 0;
+
+	for(int v=0;v<=vmax;v++)
+		b[0][v] = 0;
+
+	for(int i=1; i<=N ;i++){
+		cout<<"\n";
+		for(int v=0;v<=vmax;v++){
+			if(items[i].attachment_of==0){
+				//main-item
+				if(items[i].volume >vmax)
+					b[i][v] = b[i-1][v];
+				else{
+					int vi = (items[i].volume);
+					int b1 = CHECK(vi <=v,(b[i-1][v-vi]+ VALUE(items,i)),0) ;
+					if(b1 > b[i-1][v])
+						b[i][v] = b1, inc[i][v]=1;
+					else
+						b[i][v] = b[i-1][v];
+				}
+
+			}else{
+				//atachment item
+				int main_good = items[i].attachment_of;
+				if(inc[main_good][v]==0 && (items[main_good].volume+items[i].volume)<vmax){
+					//main item not previously included
+					int vi = (items[i].volume+items[main_good].volume);
+					int b1 = CHECK(vi <= v, b[i-1][v-vi] + VALUE(items,i) + VALUE(items,main_good),0);
+					if(b1>b[i-1][v])
+						b[i][v] = b1,inc[i][v]=1,inc[main_good][v]=1;
+					else
+						b[i][v] =  b[i-1][v];
+				}else{
+					//main item included previously
+					if(items[i].volume >vmax)
+						b[i][v] = b[i-1][v];
+					else{
+						int vi = items[i].volume;
+						int b1 = CHECK( vi <= v,(b[i-1][v-vi]+ VALUE(items,i)),0) ;
+						if(b1 > b[i-1][v])
+							b[i][v] = b1, inc[i][v]=1;
+						else
+							b[i][v] = b[i-1][v];
+					}
+				}
+
+			}
+			if(b[i][v]>0)
+				cout<<b[i][v]<<"\t";
+			else cout<<"\t";
+		}
+
+	}
+	cout<<"\nanswer\n";
+	int l = vmax;
+	for(int i=N; i>=1 ;i--)
+		if(inc[i][l]==1){
+			l = l - items[i].volume;
+			cout<<"keeping: "<<i<<" "<<items[i].volume<<" "<<items[i].cost<<"\n";
+		}
+
+	return b[N][vmax];
+}
+
+
+
+int main() {
+	cout << "Solution to BACKPACK using Dynamic Programming" << endl; // prints Solution to BACKPACK using Dynamic Programming
+	//return 0;
+	int numcases;
+	cin>>numcases;
+	for(int i =0; i< numcases; i++){
+		long vmax;
+		int N;
+		cin>>vmax>>N;
+		item items[60];
+		for(int j=1; j<=N; j++){
+			cin>>items[j].volume>>items[j].cost>>items[j].attachment_of;
+			items[j].included = false;
+			items[j].volume /= 10;
+		}
+
+		//partition the array so that the attachments come afer their main goods
+		for(int j=1;j<=N;j++){
+			if(items[j].attachment_of > j){
+				if(items[items[j].attachment_of].attachment_of==0)
+					SWAP(items,j,items[j].attachment_of)
+				else items[j].attachment_of = items[items[j].attachment_of].attachment_of;
+			}
+		}
+		int c = calculateCost(items,N,vmax/10);
+
+	}
+
+}

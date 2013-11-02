@@ -1,0 +1,1 @@
+Setnja.d: ../Setnja.cpp
